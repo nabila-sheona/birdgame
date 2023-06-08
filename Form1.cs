@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+
+
+
 
 namespace flappy_bird_1._0
 {
@@ -22,6 +26,17 @@ namespace flappy_bird_1._0
         public Form1()
         {
             InitializeComponent();
+            // Create a SoundPlayer instance
+            SoundPlayer player = new SoundPlayer();
+
+            // Set the path to your background music file
+            player.SoundLocation = "D:\\freshman summer\\flappy_bird_1.0\\Resources\\cheerful-cinematic-song-without-solo-guitar-10709.wav";
+
+            // Play the music
+            player.PlayLooping();
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -182,6 +197,16 @@ namespace flappy_bird_1._0
             
 
 
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void SOUND(object sender, EventArgs e)
+        {
 
         }
     }

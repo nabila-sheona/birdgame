@@ -35,6 +35,7 @@
             this.ground = new System.Windows.Forms.PictureBox();
             this.flappybird = new System.Windows.Forms.PictureBox();
             this.gametimer = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pipebottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
@@ -109,6 +110,10 @@
             this.gametimer.Interval = 40;
             this.gametimer.Tick += new System.EventHandler(this.timer1events);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -143,6 +148,7 @@
         private System.Windows.Forms.PictureBox ground;
         private System.Windows.Forms.PictureBox flappybird;
         public System.Windows.Forms.Timer gametimer;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
